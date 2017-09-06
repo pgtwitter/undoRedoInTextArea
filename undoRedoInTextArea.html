@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<textarea id="textareaid0">1234567890</textarea>
+<textarea id="textareaid1">1234567890</textarea>
+<script src="./undoRedoInTextArea.js"></script>
+<script>
+	//usage
+	document.newUndoRedoObject('textareaid0');
+
+	//sample
+	var undoRedoInstance = document.newUndoRedoObject('textareaid1');
+	document.getElementById('textareaid1').value = 'abcdefghij';
+	document.getElementById('textareaid1').selectionStart= 3;
+	document.getElementById('textareaid1').selectionEnd= 6;
+	undoRedoInstance.init();
+</script>
